@@ -14,21 +14,21 @@
     require './assets/components/navbar.php';
     ?>
 
-<div class="container mt-5 ">
+<div class="container col-md-4 mt-5 shadow py-4 " >
         <div class="row justify-content-center ">
-            <div class="col-md-4 ">
+            <div class="col-md-10 ">
                 <div class="text-center">
-                <img src="./assets/images/logon.png" class="img-fluid h-50 w-50 ">
+                <img src="./assets/images/logonn.png" class="img-fluid h-50 w-50 ">
 </div>
                 <h2 class="text-center">Login</h2>
                 <form>
                     <div class="form-group my-2">
                         <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        <input type="email" class="form-control rounded-5" id="email" placeholder="Enter email">
                     </div>
                     <div class="form-group my-2">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
+                        <input type="password" class="form-control rounded-5" id="password" placeholder="Password">
                     </div>
                     <div class="text-center">
                     <button type="submit" class="btn btn-primary btn-block mt-4 ">Login</button>
