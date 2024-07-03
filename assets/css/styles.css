@@ -6,6 +6,14 @@
     rgba(9, 9, 121, 1) 100%
   );
 }
+.get-danger {
+  background: rgb(254, 122, 122);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 122, 122, 1) 0%,
+    rgba(255, 0, 0, 1) 67%
+  );
+}
 .login-start {
   background: rgb(0, 166, 81);
   background: linear-gradient(
@@ -29,11 +37,6 @@
   background: white;
   color: black;
 }
-.background-login {
-  background: rgb(78, 255, 164);
-  background: linear-gradient(
-    90deg,
-    rgba(78, 255, 164, 1) 0%,
-    rgba(141, 198, 63, 1) 47%
-  );
+body {
+  padding-top: 5rem;
 }

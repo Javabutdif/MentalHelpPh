@@ -18,7 +18,7 @@
         <div class="col-6 p-2">
             <h1 class="mb-5">The strongest people are not those who show strength in front of us but those who win battles we know nothing about.</h1>
             <div class="d-flex flex-row gap-4 text-center">
-                <button class="button get-start text-white">Get Started</button>
+                <button class="button get-start text-white" type="button" data-toggle="modal" data-target="#exampleModal">Get Started</button>
                 <a href="login.php" class="button login-start text-white">Login</a>
             </div>
             
@@ -37,6 +37,7 @@
 
 
 <?php
+include './assets/components/modal.php';
 require './assets/js/bootstrap.php';
 ?>
 

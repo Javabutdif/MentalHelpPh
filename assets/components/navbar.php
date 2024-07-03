@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
         <img src="./assets/images/logon.png" style="height: 4rem ; width: 4rem" class="mx-3" />
         <a class="navbar-brand" style="font-weight: bold" href="index.php">MentalHelp PH</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,10 +9,10 @@
             <ul class="navbar-nav ms-auto ">
             
                 <li class="nav-item active" >
-                    <a class="nav-link " href="#">Client Feedback </a>
+                    <a class="nav-link " href="#">Community </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="about.php">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
