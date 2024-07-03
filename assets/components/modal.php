@@ -15,8 +15,8 @@
       </div>
       <div class="modal-footer">
      
-        <button type="button" class="button get-start text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-toggle="modal" data-dismiss="modal" data-target="#registerModal">Yes</button>
-        <button type="button" class="button get-danger text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-toggle="modal" data-dismiss="modal" data-target="#userModal">No</button>
+        <button type="button" class="button btn-primary text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-toggle="modal" data-dismiss="modal" data-target="#registerModal">Yes</button>
+        <button type="button" class="button btn-danger text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-toggle="modal" data-dismiss="modal" data-target="#userModal">No</button>
       </div>
     </div>
   </div>
