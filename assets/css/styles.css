@@ -1,26 +1,39 @@
-.get-start{
-    background: rgb(0,212,255);
-    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 100%);
-  
+.get-start {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(9, 9, 121, 1) 100%
+  );
 }
-.login-start{
-    background: rgb(0,166,81);
-background: linear-gradient(90deg, rgba(0,166,81,1) 0%, rgba(141,198,63,1) 100%);
+.login-start {
+  background: rgb(0, 166, 81);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 166, 81, 1) 0%,
+    rgba(141, 198, 63, 1) 100%
+  );
 }
-.button{
-    font-size: larger;
-    border: 0cap;
-    padding: 10px;
-    border-radius: 5rem 5rem 5rem 5rem;
-    padding-left: 6rem;
-    padding-right:6rem;
-
+.button {
+  font-size: larger;
+  border: 0cap;
+  padding: 10px;
+  border-radius: 5rem 5rem 5rem 5rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
-.img-start{
-    width: 50rem;
-
+.img-start {
+  width: 50rem;
 }
-.login-start :hover{
-    background: white;
-    color: black;
+.login-start :hover {
+  background: white;
+  color: black;
+}
+.background-login {
+  background: rgb(78, 255, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(78, 255, 164, 1) 0%,
+    rgba(141, 198, 63, 1) 47%
+  );
 }
