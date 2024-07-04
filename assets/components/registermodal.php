@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-          <form >
+          <form>
           <div class="form-group my-2 ">
                         <label for="name" class="form-label me-4">Full Name</label>
                         <input type="text" class="form-control rounded-5" id="name" placeholder="Enter name">
@@ -47,8 +47,8 @@
         
       </div>
       <div class="modal-footer">
-      <button type="button" class="button btn-primary text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem ">Yes</button>
-        <button type="button" class="button btn-danger text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-dismiss="modal">No</button>
+      <button type="button" class="button btn-primary text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem ">Register</button>
+        <button type="button" class="button btn-danger text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-dismiss="modal">Cancel</button>
      
       </div>
     </div>
