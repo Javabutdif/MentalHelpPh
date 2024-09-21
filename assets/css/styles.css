@@ -37,6 +37,15 @@
   background: white;
   color: black;
 }
-body {
-  padding-top: 5rem;
+
+.main-color {
+  color: white;
+}
+
+.dashboard-card {
+  border-radius: 10px;
+}
+
+.dashboard-container {
+  padding-top: 30px;
 }

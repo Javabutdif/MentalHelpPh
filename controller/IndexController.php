@@ -1,7 +1,7 @@
 <?php
 
 require_once 'backend/IndexBackend.php';
-//require_once 'routes/AdminRoutes.php';
+require_once 'routes/AdminRoutes.php';
 
 if (isset($_POST['submitLogin'])) {
     $emailData = $_POST['emailLogin'];
