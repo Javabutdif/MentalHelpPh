@@ -1,3 +1,14 @@
+<?php
+require '../../assets/prompts/alert.php';
+require_once '../../controller/AdminController.php';
+
+if (isset($_SESSION['is_regenerated']) && $_SESSION['flag']) {
+    echo alert_function('success', 'Login Successfully!');
+    $_SESSION['flag'] = false;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,21 +16,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MentalHelp PH | Admin</title>
-
+     <link rel="stylesheet" href="../../assets//css//styles.css">
 
     <?php
     require_once '../../assets/css/bootstrap.php';
+  
+    include 'components/Navbar.php';
     ?>
 
 
 </head>
 
-<body>
+<body >
     <?php
-    include 'components/Navbar.php';
+    echo navbar_admin("Dashboard" , "AdminDashboard.php","Dashboard", "Patients" , "Professionals");
     ?>
     <div class="container dashboard-container">
-
+    <h1>Hello <?php echo $_SESSION['name'] ?></h1>
         <div class="row">
 
             <div class="col-lg-4 col-md-6 mb-4">
@@ -31,7 +44,7 @@
                 </div>
             </div>
 
-            <!-- Professionals card -->
+           
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card text-white bg-success dashboard-card">
                     <div class="card-body">

@@ -13,7 +13,7 @@
 
 <body>
    <?php require './assets/components/navbar.php' ?>
-    <div class="mt-5 container">
+    <div class="mt-5 pt-5 container">
         <div class="row">
         <div class="col-6 p-2">
             <h1 class="mb-5">The strongest people are not those who show strength in front of us but those who win battles we know nothing about.</h1>

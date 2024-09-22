@@ -1,5 +1,11 @@
 <?php
 require_once 'controller/IndexController.php';
+
+if (isset($_SESSION['is_regenerated']) && !$_SESSION['flag']) {
+    echo alert_function('success', 'Logout Successfully!');
+   session_destroy();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +15,8 @@ require_once 'controller/IndexController.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MentalHelp PH | Login</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  
     <?php
     require './assets/css/bootstrap.php';
     ?>
