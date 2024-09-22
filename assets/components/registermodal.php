@@ -3,13 +3,13 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+        <h5 class="modal-title fw-bold text-primary" id="exampleModalLabel">Sign Up</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-          <form>
+          <form method="POST">
           <div class="form-group my-2 ">
                         <label for="name" class="form-label me-4">Full Name</label>
                         <input type="text" class="form-control rounded-5" id="name" placeholder="Enter name">

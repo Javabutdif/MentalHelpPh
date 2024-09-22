@@ -1,7 +1,10 @@
 <?php
 session_start();
 error_reporting(1);
-require 'vendor/autoload.php';
+
+
+require __DIR__ . '/../vendor/autoload.php';
+
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -18,13 +21,11 @@ class Database
 
     private function __construct()
     {
-
         $this->db_host = $_ENV['db_host'];
         $this->db_username = $_ENV['db_username'];
         $this->db_password = $_ENV['db_password'];
         $this->db_name = $_ENV['db_name'];
         $this->db_port = $_ENV['db_port'];
-
 
         $this->con = mysqli_connect($this->db_host, $this->db_username, $this->db_password, $this->db_name, $this->db_port);
 
@@ -47,4 +48,5 @@ class Database
     }
 }
 
+// Set the timezone
 date_default_timezone_set('Asia/Manila');

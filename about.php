@@ -9,11 +9,11 @@
     require './assets/css/bootstrap.php';
     ?>
 </head>
-<body>
+<body class="pt-5">
 <?php
     require './assets/components/navbar.php';
     ?>
-<section class="about-us-section py-5">
+<section class="about-us-section py-5 ">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mb-4">
@@ -26,15 +26,15 @@
         </div>
       </div>
       <div class="col gap-4 form-group">
-        <div class="col-lg-4 mb-4 form-control">
+        <div class="col-lg-4 mb-4 form-control text-white" style="background-color: rgba(0, 166, 81, 1) ">
           <h3>Our Mission</h3>
           <p>Our mission is to break down barriers to mental health care by providing a user-friendly platform for students to access professional psychological support.</p>
         </div>
-        <div class="col-lg-4 mb-4 form-control">
+        <div class="col-lg-4 mb-4 form-control text-white" style="background-color: rgba(0, 166, 81, 1) ">
           <h3>Our Vision</h3>
           <p>We envision a world where mental health care is readily accessible to everyone, and seeking help is as easy as a few clicks.</p>
         </div>
-        <div class="col-lg-4 mb-4 form-control">
+        <div class="col-lg-4 mb-4 form-control text-white" style="background-color: rgba(0, 166, 81, 1) ">
           <h3>Our Values</h3>
           <ul>
             <li>Accessibility</li>

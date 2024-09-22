@@ -38,10 +38,6 @@
   color: black;
 }
 
-.main-color {
-  color: white;
-}
-
 .dashboard-card {
   border-radius: 10px;
 }
@@ -49,3 +45,8 @@
 .dashboard-container {
   padding-top: 30px;
 }
+body{
+  padding-top: 5rem;
+}
+
+
