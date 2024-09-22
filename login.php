@@ -20,7 +20,7 @@
                 <div class="text-center">
                 <img src="./assets/images/logonn.png" class="img-fluid h-50 w-50 ">
 </div>
-                <h2 class="text-center">Login</h2>
+                <h2 class="text-center">Welcome</h2>
                 <form>
                     <div class="form-group my-2">
                         <label for="email">Email address</label>
@@ -33,7 +33,7 @@
                     <div class="text-center">
                     <button type="submit" class="button btn-primary btn-block mt-4 " style="padding-left:3rem;padding-right:3rem">Login</button>
 </div>
-                </form>
+                  </form>
             </div>
         </div>
     </div>
