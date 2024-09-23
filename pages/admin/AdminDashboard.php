@@ -21,7 +21,7 @@ if (isset($_SESSION['is_regenerated']) && $_SESSION['flag']) {
     <?php
     require_once '../../assets/css/bootstrap.php';
   
-    include 'components/Navbar.php';
+    include '../components/Navbar.php';
     ?>
 
 
@@ -29,7 +29,7 @@ if (isset($_SESSION['is_regenerated']) && $_SESSION['flag']) {
 
 <body >
     <?php
-    echo navbar_admin("Dashboard" , "AdminDashboard.php","Dashboard", "Patients" , "Professionals");
+    echo navbar("Dashboard" , "AdminDashboard.php","Dashboard", "Patients" , "Professionals");
     ?>
     <div class="container dashboard-container">
     <h1>Hello <?php echo $_SESSION['name'] ?></h1>
