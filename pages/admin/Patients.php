@@ -8,12 +8,12 @@
     <?php
     require_once '../../assets/css/bootstrap.php';
   
-    include 'components/Navbar.php';
+     include '../components/Navbar.php';
     ?>
 </head>
 <body>
     <?php
-    echo navbar_admin("Patients" , "AdminDashboard.php","Dashboard",  "Patients" , "Professionals");
+    echo navbar("Patients" , "AdminDashboard.php","Dashboard",  "Patients" , "Professionals");
     ?>
     
     <h1>This is patients</h1>
