@@ -39,7 +39,7 @@ if (isset($_SESSION['is_regenerated']) && $_SESSION['flag']) {
                 <div class="card text-white bg-primary dashboard-card">
                     <div class="card-body">
                         <h5 class="card-title">Registered Patients</h5>
-                        <p class="card-text display-4">1234</p>
+                        <p class="card-text display-4"><?php echo retrieve_patients_dashboard(); ?></p>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,15 @@ if (isset($_SESSION['is_regenerated']) && $_SESSION['flag']) {
                 <div class="card text-white bg-success dashboard-card">
                     <div class="card-body">
                         <h5 class="card-title">Registered Professionals</h5>
-                        <p class="card-text display-4">567</p>
+                        <p class="card-text display-4"><?php echo retrieve_professionals_pending_dashboard(); ?></p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card text-white bg-success dashboard-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pending  Account Requests</h5>
+                        <p class="card-text display-4"><?php echo retrieve_professionals_active_dashboard(); ?></p>
                     </div>
                 </div>
             </div>
