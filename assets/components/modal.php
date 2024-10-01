@@ -1,5 +1,3 @@
-
-
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -10,19 +8,19 @@
         </button>
       </div>
       <div class="modal-body text-center">
-            Are you a psychologist/psychiatrist?
-        
+        Would you like to register as a
+
       </div>
       <div class="modal-footer">
-     
-        <button type="button" class="button btn-primary text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-toggle="modal" data-dismiss="modal" data-target="#registerModal">Yes</button>
-        <button type="button" class="button btn-danger text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-toggle="modal" data-dismiss="modal" data-target="#userModal">No</button>
+
+        <button type="button" class="button btn-primary text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-toggle="modal" data-dismiss="modal" data-target="#registerModal">Psychologist/Psychiatrist?</button>
+        <button type="button" class="button btn-secondary text-white" style="font-size:small; padding-left:3rem; padding-right: 3rem " data-toggle="modal" data-dismiss="modal" data-target="#userModal">Patient?</button>
       </div>
     </div>
   </div>
 </div>
 
-<?php 
-  include './assets/components/registermodal.php';
-  include './assets/components/userregistermodal.php';
+<?php
+include './assets/components/registermodal.php';
+include './assets/components/userregistermodal.php';
 ?>
