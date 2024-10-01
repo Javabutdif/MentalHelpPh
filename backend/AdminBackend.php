@@ -145,7 +145,8 @@ function retrieve_professionals_pending_dashboard()
 
     $sql = " SELECT count(professional_id) as id from mental_health_professionals WHERE professional_status = 'Pending'";
     $result = mysqli_query($con, $sql);
-    $professional = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $professional = mysqli_fetch_array(
+        $result, MYSQLI_ASSOC);
 
     return $professional['id'];
 }

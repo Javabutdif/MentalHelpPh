@@ -1,4 +1,7 @@
 {
-  "files.autoSave": "onWindowChange",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	"files.autoSave": "afterDelay",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+	}
 }

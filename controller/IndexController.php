@@ -5,6 +5,95 @@ require_once 'routes/AdminRoutes.php';
 require_once 'routes/PatientRoutes.php';
 require_once 'routes/ProfessionalRoutes.php';
 require_once 'assets/prompts/alert.php';
+require_once 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+
+
+function generateOTP($length = 6)
+{
+    return rand(pow(10, $length - 1), pow(10, $length) - 1);
+}
+
+function sendOtp($email)
+{
+
+    $recipientEmail = $email;
+    $otp = generateOTP();
+    $subject = 'Your OTP Code';
+    $message = "Your OTP code is: $otp";
+
+    $mail = new PHPMailer(true);
+
+    try {
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'mentalhelpph75@gmail.com';
+        $mail->Password   = 'mnvx ajkq hmsj mdlr';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
+
+        // Recipients
+        $mail->setFrom('mentalhelpph75@gmail.com', 'MentalHelp PH [Diones]');
+        $mail->addAddress($recipientEmail);
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body    = $message;
+
+        // Send the email
+        $mail->send();
+        echo 'OTP has been sent to your email: ' . $recipientEmail;
+
+        // Store email and OTP in session
+        $_SESSION['email'] = $recipientEmail;
+        $_SESSION['otp'] = $otp;
+
+        // After sending the OTP, display the OTP input form
+        displayOtpForm();
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
+
+function displayOtpForm()
+{
+    // Display the form to input the OTP
+    echo '
+        <form action="" method="POST">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" name="inputOtp" id="otp" required>
+            <button type="submit" name="verifyOtp">Verify OTP</button>
+        </form>
+    ';
+}
+
+
+if (isset($_POST['verifyOtp'])) {
+    $inputOtp = $_POST['inputOtp'];
+
+    // Verify OTP
+    if (verifyOtp($inputOtp)) {
+        echo 'OTP verified successfully!';
+    } else {
+        echo 'Invalid OTP. Please try again.';
+    }
+}
+
+function verifyOtp($inputOtp)
+{
+
+    if (isset($_SESSION['otp']) && $_SESSION['otp'] == $inputOtp) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 
 if (isset($_POST['submitLogin'])) {
@@ -50,14 +139,19 @@ if(isset($_POST['submitRegister'])){
 
 
     if($password === $confirm_password){
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
-        if(patient_register($firstname, $lastname, $email, $hashed_password, $gender, $age, $address, $status, $contact) ){
-            echo alert_function('success' , 'Patient Successfully Registered');
+
+        if (sendOtp($email)) {
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+            if (patient_register($firstname, $lastname, $email, $hashed_password, $gender, $age, $address, $status, $contact)) {
+                echo alert_function('success', 'Patient Successfully Registered');
+            } else {
+                echo alert_function('error', 'Internal Server Error!');
+            }
         }
-        else{
-             echo alert_function('error' , 'Internal Server Error!');
-        }
+
+
+       
         
     }
     else{
